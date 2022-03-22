@@ -1,5 +1,6 @@
 import { Text } from '@chakra-ui/react'
 import Head from 'next/head'
+import { About } from '../components/About'
 import { Header } from '../components/Header'
 import { Home } from '../components/Home'
 
@@ -15,6 +16,8 @@ export default function App() {
       <Header />
 
       <Home />
+
+      <About />
     </>
   )
 }

@@ -10,6 +10,7 @@ const customTheme = {
 
     gray: {
       '900': '#181824',
+      '400': '#BDBDBD',
     },
   },
 
@@ -20,6 +21,10 @@ const customTheme = {
 
   styles: {
     global: {
+      html: {
+        overflowX: 'hidden',
+      },
+
       body: {
         bg: 'gray.900', // bg --> background
         color: 'white',
