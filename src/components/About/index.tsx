@@ -1,14 +1,14 @@
-import { Flex, Text, Heading, HStack, SimpleGrid, Box } from '@chakra-ui/react'
+import { Flex, Text, Heading, HStack } from '@chakra-ui/react'
 import { AbilitiesCards } from './cards'
 
 import { BsCodeSquare } from 'react-icons/bs'
-import { AiFillExperiment } from 'react-icons/ai'
 
 export function About() {
   return (
     <Flex mt="8rem" width="100vw" minH="100vh" bg="purple.900">
       <Flex
         w="70rem"
+        h="auto"
         p="2rem 0"
         margin="0 auto"
         direction="column"

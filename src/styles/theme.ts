@@ -19,6 +19,13 @@ const customTheme = {
     body: 'Roboto',
   },
 
+  fontSizes: {
+    xs: '12px',
+    md: '14px',
+    lg: '16px',
+    xl: '1rem',
+  },
+
   styles: {
     global: {
       html: {

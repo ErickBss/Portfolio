@@ -7,24 +7,35 @@ export function Home() {
   return (
     <Flex
       w="100vw"
-      justify="space-between"
       alignItems="center"
-      h="calc(100vh - 5rem)"
+      h="max(600px ,calc(100vh - 5rem))"
       bg="purple.900"
     >
-      <Flex margin="0 auto" w="70rem">
+      <Flex
+        gap="2.5rem"
+        direction={{ base: 'column-reverse', md: 'row' }}
+        margin="0 auto"
+        w={{ base: '40rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+      >
         <Flex
           flex="1"
           gap="1.5rem"
           flexDirection="column"
-          align="flex-start"
+          align={{ base: 'center', md: 'flex-start' }}
           justify="center"
           fontWeight="600"
           lineHeight="1"
         >
           <Text fontSize="2rem">Hello, I am</Text>
-          <Text fontSize="3.25rem">Erick Souza Basso</Text>
-          <Text fontSize="1.125rem" fontWeight="400" lineHeight="normal">
+          <Text fontSize={{ base: '2.75rem', lg: '3rem', xl: '3.25rem' }}>
+            Erick Souza Basso
+          </Text>
+          <Text
+            textAlign={{ base: 'center', md: 'left' }}
+            fontSize="1.125rem"
+            fontWeight="400"
+            lineHeight="normal"
+          >
             Freelance UI designer, Fullstack developer, Data Miner. I create
             seamless web experiences for end-users.
           </Text>
@@ -40,8 +51,23 @@ export function Home() {
           </HStack>
         </Flex>
         <Flex flex="1" justify=" center">
-          <Box borderRadius="full" padding="3rem" bg="purple.400">
-            <Image src="/logo.png" alt="Creator photo" />
+          <Box
+            borderRadius="full"
+            padding={{
+              base: '2rem',
+              md: '2.5rem',
+              lg: '3rem',
+            }}
+            bg="purple.400"
+          >
+            <Image
+              src="/logo.png"
+              w={{
+                base: '12rem',
+                md: '15.6rem',
+              }}
+              alt="Creator photo"
+            />
           </Box>
         </Flex>
       </Flex>
