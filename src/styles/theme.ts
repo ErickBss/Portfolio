@@ -7,6 +7,10 @@ const customTheme = {
       '700': '#282162',
       '400': '#7562E0',
     },
+
+    gray: {
+      '900': '#181824',
+    },
   },
 
   fonts: {
@@ -17,7 +21,7 @@ const customTheme = {
   styles: {
     global: {
       body: {
-        bg: 'purple.900', // bg --> background
+        bg: 'gray.900', // bg --> background
         color: 'white',
       },
     },
