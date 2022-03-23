@@ -1,4 +1,4 @@
-import { Flex, Text, Heading, HStack } from '@chakra-ui/react'
+import { Flex, Text, Heading, Stack } from '@chakra-ui/react'
 import { AbilitiesCards } from './cards'
 
 import { BsCodeSquare } from 'react-icons/bs'
@@ -7,12 +7,13 @@ export function About() {
   return (
     <Flex mt="8rem" width="100vw" minH="100vh" bg="purple.900">
       <Flex
-        w="70rem"
+        w={{ base: '40rem', md: '54rem', lg: '64rem', xl: '70rem' }}
         h="auto"
         p="2rem 0"
         margin="0 auto"
         direction="column"
-        align="flex-start"
+        align={{ base: 'center', md: 'flex-start' }}
+        textAlign={{ base: 'center', md: 'left' }}
         justify="space-evenly"
       >
         <Heading color="purple.400" fontWeight="600" fontSize="2rem">
@@ -24,7 +25,11 @@ export function About() {
           Development and advance i have core understanding of advance UI design
           principles. Here are the major skiills i have.
         </Text>
-        <HStack spacing="2rem">
+        <Stack
+          align="center"
+          direction={{ base: 'column', md: 'row' }}
+          spacing={{ base: '0.5rem', md: '2rem' }}
+        >
           <Text fontSize="6rem" fontWeight="600" color="purple.400">
             4
           </Text>
@@ -32,10 +37,10 @@ export function About() {
             Years of experience. Specialised in building apps, while ensuring a
             seamless web experience for end users.
           </Text>
-        </HStack>
+        </Stack>
 
         <Flex
-          width={['60rem', '60rem', '60rem', '70rem']}
+          w={{ base: '40rem', md: '54rem', lg: '64rem', xl: '70rem' }}
           alignItems="flex-start"
           justifyContent="space-between"
           flexWrap="wrap"
