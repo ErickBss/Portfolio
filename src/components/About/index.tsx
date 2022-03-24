@@ -87,7 +87,7 @@ export function About() {
             icon={BsCodeSquare}
           />
         </Flex>
-        <Definitions />
+        <Definitions currentAbility={currentAbility} />
       </Flex>
     </Flex>
   )

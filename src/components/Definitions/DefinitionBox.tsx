@@ -1,15 +1,36 @@
 import { Box, Icon, Heading, Text, Flex, VStack } from '@chakra-ui/react'
 
-import { BsCodeSquare } from 'react-icons/bs'
+import { IconType } from 'react-icons/lib'
 
-export function DefinitionBox() {
+interface DefinitionBoxProps {
+  icon: IconType
+  ability: string
+  description: string
+  currentAbility: string
+}
+
+export function DefinitionBox({
+  icon,
+  ability,
+  description,
+  currentAbility,
+}: DefinitionBoxProps) {
+  let isActive = false
+
+  console.log(currentAbility, '||', ability)
+
+  if (currentAbility === ability) {
+    isActive = true
+  }
+
   return (
     <Box
       display="flex"
       p="0 0.5rem"
       w="21.125rem"
       h="21.125rem"
-      border="2px solid white"
+      border="2px solid"
+      borderColor={isActive ? 'purple.400' : 'white'}
       flexDirection="column"
       justifyContent="center"
       gap="1rem"
@@ -18,14 +39,13 @@ export function DefinitionBox() {
       borderRadius="1rem"
     >
       <VStack spacing="1rem">
-        <Icon as={BsCodeSquare} fontSize="3.375rem" />
+        <Icon as={icon} fontSize="3.375rem" />
         <Heading fontSize="1.5rem" textTransform="uppercase" fontWeight="600">
-          Web Development
+          {ability}
         </Heading>
       </VStack>
       <Text fontSize="1rem" lineHeight="2rem">
-        I create beautiful iterfaces with simple HTML, CSS e JavaScript and also
-        frameworks like Angular and ReactJS
+        {description}
       </Text>
     </Box>
   )

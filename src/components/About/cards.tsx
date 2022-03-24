@@ -1,4 +1,5 @@
 import { Box, Icon, Text } from '@chakra-ui/react'
+import { useEffect } from 'react'
 import { IconType } from 'react-icons'
 
 interface AbilitiesCardsProps {
@@ -23,7 +24,9 @@ export function AbilitiesCards({
   return (
     <Box
       as="button"
-      onClick={() => handleCurrentAbility(ability)}
+      onClick={() => {
+        handleCurrentAbility(ability)
+      }}
       display="flex"
       w={{ base: '8rem', md: '10rem', lg: '13rem', xl: '15.875rem' }}
       h={{ base: '8rem', md: '10rem', lg: '13rem', xl: '15.875rem' }}
