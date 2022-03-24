@@ -3,18 +3,27 @@ import { IconType } from 'react-icons'
 
 interface AbilitiesCardsProps {
   ability: string
+  currentAbility: string
   icon: IconType
-  isActive?: boolean
+  handleCurrentAbility: (ability: string) => void
 }
 
 export function AbilitiesCards({
   ability,
-
+  currentAbility,
+  handleCurrentAbility,
   icon,
-  isActive = false,
 }: AbilitiesCardsProps) {
+  let isActive = false
+
+  if (currentAbility === ability) {
+    isActive = true
+  }
+
   return (
     <Box
+      as="button"
+      onClick={() => handleCurrentAbility(ability)}
       display="flex"
       w={{ base: '8rem', md: '10rem', lg: '13rem', xl: '15.875rem' }}
       h={{ base: '8rem', md: '10rem', lg: '13rem', xl: '15.875rem' }}
@@ -24,6 +33,8 @@ export function AbilitiesCards({
       gap="1rem"
       justifyContent="flex-end"
       textAlign="left"
+      transition="0.2s"
+      _hover={{ bg: 'purple.400' }}
     >
       <Icon
         as={icon}

@@ -2,8 +2,17 @@ import { Flex, Text, Heading, Stack } from '@chakra-ui/react'
 import { AbilitiesCards } from './cards'
 
 import { BsCodeSquare } from 'react-icons/bs'
+import { Definitions } from '../Definitions'
+import { useState } from 'react'
 
 export function About() {
+  const [currentAbility, setCurrentAbility] = useState('')
+
+  function handleCurrentAbility(abilityName: string) {
+    setCurrentAbility(abilityName)
+  }
+
+  console.log(currentAbility)
   return (
     <Flex mt="8rem" width="100vw" minH="100vh" bg="purple.900">
       <Flex
@@ -44,19 +53,41 @@ export function About() {
           alignItems="flex-start"
           justifyContent="space-between"
           flexWrap="wrap"
+          mb="5rem"
         >
           <AbilitiesCards
-            ability="Web Development"
+            key="Front - end"
+            ability="Front - end"
+            currentAbility={currentAbility}
             icon={BsCodeSquare}
-            isActive
+            handleCurrentAbility={handleCurrentAbility}
           />
 
-          <AbilitiesCards ability="Web Development" icon={BsCodeSquare} />
+          <AbilitiesCards
+            key="Back - End Service"
+            ability="Web Development"
+            currentAbility={currentAbility}
+            handleCurrentAbility={handleCurrentAbility}
+            icon={BsCodeSquare}
+          />
 
-          <AbilitiesCards ability="Web Development" icon={BsCodeSquare} />
+          <AbilitiesCards
+            key="Web Development"
+            ability="Web Development"
+            currentAbility={currentAbility}
+            handleCurrentAbility={handleCurrentAbility}
+            icon={BsCodeSquare}
+          />
 
-          <AbilitiesCards ability="Web Development" icon={BsCodeSquare} />
+          <AbilitiesCards
+            key="Database Handle"
+            ability="Database Handle"
+            currentAbility={currentAbility}
+            handleCurrentAbility={handleCurrentAbility}
+            icon={BsCodeSquare}
+          />
         </Flex>
+        <Definitions />
       </Flex>
     </Flex>
   )
