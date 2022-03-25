@@ -10,6 +10,7 @@ const customTheme = {
 
     gray: {
       '900': '#181824',
+      '600': '#31313F',
       '400': '#BDBDBD',
     },
   },
@@ -17,13 +18,6 @@ const customTheme = {
   fonts: {
     heading: 'Roboto',
     body: 'Roboto',
-  },
-
-  fontSizes: {
-    xs: '12px',
-    md: '14px',
-    lg: '16px',
-    xl: '1rem',
   },
 
   styles: {
@@ -35,6 +29,7 @@ const customTheme = {
       body: {
         bg: 'gray.900', // bg --> background
         color: 'white',
+        fontWeight: '500',
       },
     },
   },

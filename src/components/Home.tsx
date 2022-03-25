@@ -33,7 +33,6 @@ export function Home() {
           <Text
             textAlign={{ base: 'center', md: 'left' }}
             fontSize="1.125rem"
-            fontWeight="400"
             lineHeight="normal"
           >
             Freelance UI designer, Fullstack developer, Data Miner. I create
