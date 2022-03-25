@@ -3,12 +3,12 @@ import { Flex, Heading, Stack } from '@chakra-ui/react'
 import { DefinitionBox } from './DefinitionBox'
 
 import { BsCodeSquare } from 'react-icons/bs'
+import { useIsActive } from '../hook/useIsActive'
 
-interface DefinitionBoxProps {
-  currentAbility: string
-}
+export function Definitions() {
+  const { currentItem } = useIsActive()
+  const currentAbility = currentItem
 
-export function Definitions({ currentAbility }: DefinitionBoxProps) {
   return (
     <Stack direction="column" spacing="2rem" w="70rem">
       <Heading color="purple.400" fontWeight="600">

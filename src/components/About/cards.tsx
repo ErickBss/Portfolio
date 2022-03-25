@@ -1,35 +1,31 @@
 import { Box, Icon, Text } from '@chakra-ui/react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { IconType } from 'react-icons'
+import { useIsActive } from '../hook/useIsActive'
 
 interface AbilitiesCardsProps {
   ability: string
-  currentAbility: string
   icon: IconType
-  handleCurrentAbility: (ability: string) => void
 }
 
-export function AbilitiesCards({
-  ability,
-  currentAbility,
-  handleCurrentAbility,
-  icon,
-}: AbilitiesCardsProps) {
+export function AbilitiesCards({ ability, icon }: AbilitiesCardsProps) {
+  const { currentItem, setCurrentItem } = useIsActive()
+  const currentAbility = currentItem
+
   let isActive = false
 
   if (currentAbility === ability) {
     isActive = true
   }
-
   return (
     <Box
       as="button"
       onClick={() => {
-        handleCurrentAbility(ability)
+        setCurrentItem(ability)
       }}
       display="flex"
-      w={{ base: '8rem', md: '10rem', lg: '13rem', xl: '15.875rem' }}
-      h={{ base: '8rem', md: '10rem', lg: '13rem', xl: '15.875rem' }}
+      w={{ base: '10rem', lg: '13rem', xl: '15.875rem' }}
+      h={{ base: '10rem', lg: '13rem', xl: '15.875rem' }}
       p="1.25rem"
       bg={isActive ? 'purple.400' : 'gray.400'}
       flexDirection="column"

@@ -17,8 +17,6 @@ export function DefinitionBox({
 }: DefinitionBoxProps) {
   let isActive = false
 
-  console.log(currentAbility, '||', ability)
-
   if (currentAbility === ability) {
     isActive = true
   }

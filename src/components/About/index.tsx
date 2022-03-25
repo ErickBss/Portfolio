@@ -3,16 +3,8 @@ import { AbilitiesCards } from './cards'
 
 import { BsCodeSquare } from 'react-icons/bs'
 import { Definitions } from '../Definitions'
-import { useState } from 'react'
 
 export function About() {
-  const [currentAbility, setCurrentAbility] = useState('')
-
-  function handleCurrentAbility(abilityName: string) {
-    setCurrentAbility(abilityName)
-  }
-
-  console.log(currentAbility)
   return (
     <Flex mt="8rem" width="100vw" minH="100vh" bg="purple.900">
       <Flex
@@ -49,45 +41,38 @@ export function About() {
         </Stack>
 
         <Flex
-          w={{ base: '40rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+          w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
           alignItems="flex-start"
-          justifyContent="space-between"
+          gap="2rem"
+          justifyContent={{ base: 'center', md: 'space-between' }}
           flexWrap="wrap"
           mb="5rem"
         >
           <AbilitiesCards
             key="Front - end"
             ability="Front - end"
-            currentAbility={currentAbility}
             icon={BsCodeSquare}
-            handleCurrentAbility={handleCurrentAbility}
           />
 
           <AbilitiesCards
             key="Back - End Service"
             ability="Web Development"
-            currentAbility={currentAbility}
-            handleCurrentAbility={handleCurrentAbility}
             icon={BsCodeSquare}
           />
 
           <AbilitiesCards
             key="Web Development"
             ability="Web Development"
-            currentAbility={currentAbility}
-            handleCurrentAbility={handleCurrentAbility}
             icon={BsCodeSquare}
           />
 
           <AbilitiesCards
             key="Database Handle"
             ability="Database Handle"
-            currentAbility={currentAbility}
-            handleCurrentAbility={handleCurrentAbility}
             icon={BsCodeSquare}
           />
         </Flex>
-        <Definitions currentAbility={currentAbility} />
+        <Definitions />
       </Flex>
     </Flex>
   )
