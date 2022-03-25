@@ -24,8 +24,8 @@ export function AbilitiesCards({ ability, icon }: AbilitiesCardsProps) {
         setCurrentItem(ability)
       }}
       display="flex"
-      w={{ base: '10rem', lg: '13rem', xl: '15.875rem' }}
-      h={{ base: '10rem', lg: '13rem', xl: '15.875rem' }}
+      w={{ base: '11rem', lg: '13rem', xl: '15.875rem' }}
+      h={{ base: '11rem', lg: '13rem', xl: '15.875rem' }}
       p="1.25rem"
       bg={isActive ? 'purple.400' : 'gray.400'}
       flexDirection="column"
@@ -37,10 +37,10 @@ export function AbilitiesCards({ ability, icon }: AbilitiesCardsProps) {
     >
       <Icon
         as={icon}
-        fontSize={{ base: '1.75rem', md: '2rem', lg: '2.5rem', xl: '3.25rem' }}
+        fontSize={{ base: '2rem', lg: '2.5rem', xl: '3.25rem' }}
       />
       <Text
-        fontSize={{ base: '0.75rem', md: '1rem', lg: '1.25rem', xl: '1.5rem' }}
+        fontSize={{ base: '1rem', lg: '1.25rem', xl: '1.5rem' }}
         fontWeight="600"
         textTransform="uppercase"
       >

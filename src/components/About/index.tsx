@@ -8,7 +8,7 @@ export function About() {
   return (
     <Flex mt="8rem" width="100vw" minH="100vh" bg="purple.900">
       <Flex
-        w={{ base: '40rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+        w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
         h="auto"
         p="2rem 0"
         margin="0 auto"
@@ -41,7 +41,7 @@ export function About() {
         </Stack>
 
         <Flex
-          w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+          // w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
           alignItems="flex-start"
           gap="2rem"
           justifyContent={{ base: 'center', md: 'space-between' }}

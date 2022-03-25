@@ -10,12 +10,16 @@ export function Definitions() {
   const currentAbility = currentItem
 
   return (
-    <Stack direction="column" spacing="2rem" w="70rem">
+    <Stack direction="column" spacing="2rem">
       <Heading color="purple.400" fontWeight="600">
         Definitions:
       </Heading>
 
-      <Flex justify="space-between" gap="2rem" flexWrap="wrap">
+      <Flex
+        justify={{ base: 'center', md: 'space-between' }}
+        gap="2rem"
+        flexWrap="wrap"
+      >
         <DefinitionBox
           icon={BsCodeSquare}
           ability="Web"
