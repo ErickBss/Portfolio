@@ -55,7 +55,7 @@ export function Header() {
               <DrawerHeader fontSize="1.5rem">Navigation</DrawerHeader>
 
               <DrawerBody>
-                <NavBar />
+                <NavBar closeDrawer={onClose} />
               </DrawerBody>
             </DrawerContent>
           </DrawerOverlay>

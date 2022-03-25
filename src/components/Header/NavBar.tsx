@@ -1,11 +1,10 @@
-import { Flex, Link, useBreakpointValue } from '@chakra-ui/react'
+import { Flex, Link } from '@chakra-ui/react'
 
-export function NavBar() {
-  const isWideVersion = useBreakpointValue({
-    base: true,
-    md: false,
-  })
+interface NavBarProps {
+  closeDrawer?: () => void
+}
 
+export function NavBar({ closeDrawer }: NavBarProps) {
   return (
     <Flex
       flexDirection={{ base: 'column', md: 'row' }}
@@ -15,10 +14,15 @@ export function NavBar() {
       w={{ base: 'auto', md: '28rem' }}
       fontSize="1.125rem"
     >
-      <Link color="purple.400">Home</Link>
-      <Link>About me</Link>
-      <Link>Projects</Link>
-      <Link>Contact</Link>
+      <Link
+        onClick={() => (closeDrawer ? closeDrawer() : '')}
+        color="purple.400"
+      >
+        Home
+      </Link>
+      <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>About me</Link>
+      <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>Projects</Link>
+      <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>Contact</Link>
     </Flex>
   )
 }
