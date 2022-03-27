@@ -3,6 +3,8 @@ import { Flex, Text, HStack, Button, Icon, Image, Box } from '@chakra-ui/react'
 import { IoMdPerson } from 'react-icons/io'
 import { AiFillEye } from 'react-icons/ai'
 
+import { Link as ScrollLink } from 'react-scroll'
+
 export function Home() {
   return (
     <Flex
@@ -39,14 +41,18 @@ export function Home() {
             server until the interface
           </Text>
           <HStack spacing="1rem">
-            <Button colorScheme="purple">
-              About me <Icon as={IoMdPerson} ml="5px" fontSize="1.5rem" />
-            </Button>
+            <ScrollLink to="about" smooth={true}>
+              <Button colorScheme="purple">
+                About me <Icon as={IoMdPerson} ml="5px" fontSize="1.5rem" />
+              </Button>
+            </ScrollLink>
 
-            <Button variant="outline" colorScheme="purple">
-              Projects
-              <Icon as={AiFillEye} ml="5px" fontSize="1.5rem" />
-            </Button>
+            <ScrollLink to="projects" smooth={true}>
+              <Button variant="outline" colorScheme="purple">
+                Projects
+                <Icon as={AiFillEye} ml="5px" fontSize="1.5rem" />
+              </Button>
+            </ScrollLink>
           </HStack>
         </Flex>
         <Flex flex="1" justify=" center">

@@ -8,6 +8,8 @@ import { FaServer, FaCode } from 'react-icons/fa'
 
 import { useIsActive } from '../hook/useIsActive'
 
+import { Element } from 'react-scroll'
+
 export function Definitions() {
   const { currentItem } = useIsActive()
   const currentAbility = currentItem
@@ -23,28 +25,36 @@ export function Definitions() {
         gap="2rem"
         flexWrap="wrap"
       >
-        <DefinitionBox
-          icon={FaCode}
-          ability="Full Stack"
-          category="Web Development"
-          currentAbility={currentAbility}
-          description="All the necessary abilities to make a complete web site, with, front - end, back - end and the database resources"
-        />
+        <Element name="web">
+          <DefinitionBox
+            icon={FaCode}
+            ability="Full Stack"
+            category="Web Development"
+            currentAbility={currentAbility}
+            description="All the necessary abilities to make a complete web site, with, front - end, back - end and the database resources"
+          />
+        </Element>
 
-        <DefinitionBox
-          icon={RiPagesFill}
-          ability="Interfaces"
-          category="Front - End Service"
-          currentAbility={currentAbility}
-          description="The interface is the visual communication with the user, so, for the development I use the library ReactJS with the framework NextJS"
-        />
-        <DefinitionBox
-          icon={FaServer}
-          ability="Server Side"
-          category="Back - End Service"
-          currentAbility={currentAbility}
-          description="The logical app part is on the server, where is made all the sensitive features and treatment of private data. I use NodeJs with Express for it"
-        />
+        <Element name="front">
+          <DefinitionBox
+            icon={RiPagesFill}
+            ability="Interfaces"
+            category="Front - End Service"
+            currentAbility={currentAbility}
+            description="The interface is the visual communication with the user, so, for the development I use the library ReactJS with the framework NextJS"
+          />
+        </Element>
+
+        <Element name="back">
+          <DefinitionBox
+            icon={FaServer}
+            ability="Server Side"
+            category="Back - End Service"
+            currentAbility={currentAbility}
+            description="The logical app part is on the server, where is made all the sensitive features and treatment of private data. I use NodeJs with Express for it"
+          />
+        </Element>
+
         <DefinitionBox
           icon={FaServer}
           ability="RestAPI"
@@ -53,13 +63,15 @@ export function Definitions() {
           description="Api is the way for get some data a internal or external server. RestAPI is a group of obligations which I use to consume that data"
         />
 
-        <DefinitionBox
-          icon={BsServer}
-          ability="Storage"
-          category="Database Handle"
-          currentAbility={currentAbility}
-          description="Store the data has many purpose, like, a login system or just for register. For all the possible storage features I use mysql and postgres databases"
-        />
+        <Element name="database">
+          <DefinitionBox
+            icon={BsServer}
+            ability="Storage"
+            category="Database Handle"
+            currentAbility={currentAbility}
+            description="Store the data has many purpose, like, a login system or just for register. For all the possible storage features I use mysql and postgres databases"
+          />
+        </Element>
 
         <DefinitionBox
           icon={BsServer}

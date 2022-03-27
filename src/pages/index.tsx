@@ -1,9 +1,12 @@
-import { Text } from '@chakra-ui/react'
 import Head from 'next/head'
+
 import { About } from '../components/About'
 import { Header } from '../components/Header'
 import { Home } from '../components/Home'
-import Projects from '../components/Projects'
+
+import { Projects } from '../components/Projects'
+
+import { animateScroll as scroll, Element } from 'react-scroll'
 
 export default function App() {
   return (

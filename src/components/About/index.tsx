@@ -6,6 +6,9 @@ import { RiPagesFill } from 'react-icons/ri'
 import { FaServer, FaCode } from 'react-icons/fa'
 
 import { Definitions } from '../Definitions'
+import { Element } from 'react-scroll'
+
+import { Link } from 'react-scroll'
 
 export function About() {
   return (
@@ -20,9 +23,11 @@ export function About() {
         textAlign={{ base: 'center', md: 'left' }}
         justify="space-evenly"
       >
-        <Heading color="purple.400" fontWeight="600" fontSize="2rem">
-          About me:
-        </Heading>
+        <Element name="about">
+          <Heading color="purple.400" fontWeight="600" fontSize="2rem">
+            About me:
+          </Heading>
+        </Element>
         <Text textAlign="justify" fontSize="1.125rem">
           Hi, my name is Érick, I am a student and practically programming. I
           focus on the full-stack area and on React, NodeJs, NextJs and Postgres
@@ -53,28 +58,37 @@ export function About() {
           flexWrap="wrap"
           m="2rem 0"
         >
-          <AbilitiesCards
-            key="Web Development"
-            ability="Web Development"
-            icon={FaCode}
-          />
-          <AbilitiesCards
-            key="Front - End Service"
-            ability="Front - End Service"
-            icon={RiPagesFill}
-          />
+          <Link to="web" smooth={true}>
+            <AbilitiesCards
+              key="Web Development"
+              ability="Web Development"
+              icon={FaCode}
+            />
+          </Link>
 
-          <AbilitiesCards
-            key="Back - End Service"
-            ability="Back - End Service"
-            icon={FaServer}
-          />
+          <Link to="front" smooth={true}>
+            <AbilitiesCards
+              key="Front - End Service"
+              ability="Front - End Service"
+              icon={RiPagesFill}
+            />
+          </Link>
 
-          <AbilitiesCards
-            key="Database Handle"
-            ability="Database Handle"
-            icon={BsServer}
-          />
+          <Link to="back" smooth={true}>
+            <AbilitiesCards
+              key="Back - End Service"
+              ability="Back - End Service"
+              icon={FaServer}
+            />
+          </Link>
+
+          <Link to="database" smooth={true}>
+            <AbilitiesCards
+              key="Database Handle"
+              ability="Database Handle"
+              icon={BsServer}
+            />
+          </Link>
         </Flex>
 
         <Definitions />

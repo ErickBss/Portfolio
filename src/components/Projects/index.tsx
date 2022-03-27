@@ -1,7 +1,8 @@
 import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { Element } from 'react-scroll'
 import { Project } from './Project'
 
-export default function Projects() {
+export function Projects() {
   return (
     <Flex bg="purple.900" w="100vw" minH="100vh">
       <Flex
@@ -13,9 +14,11 @@ export default function Projects() {
         w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
         p="2rem  0"
       >
-        <Heading color="purple.400" fontSize="2rem">
-          Projects:
-        </Heading>
+        <Element name="projects">
+          <Heading color="purple.400" fontSize="2rem">
+            Projects:
+          </Heading>
+        </Element>
 
         <Text fontSize="1.125rem">
           I have worked on many projects over the course of being a Web

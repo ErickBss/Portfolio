@@ -1,5 +1,7 @@
 import { Flex, Link } from '@chakra-ui/react'
 
+import { Link as ScrollLink } from 'react-scroll'
+
 interface NavBarProps {
   closeDrawer?: () => void
 }
@@ -20,8 +22,13 @@ export function NavBar({ closeDrawer }: NavBarProps) {
       >
         Home
       </Link>
-      <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>About me</Link>
-      <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>Projects</Link>
+      <ScrollLink to="about" smooth={true}>
+        <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>About me</Link>
+      </ScrollLink>
+
+      <ScrollLink to="projects" smooth={true}>
+        <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>Projects</Link>
+      </ScrollLink>
       <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>Contact</Link>
     </Flex>
   )
