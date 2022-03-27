@@ -7,6 +7,7 @@ import { Home } from '../components/Home'
 import { Projects } from '../components/Projects'
 
 import { animateScroll as scroll, Element } from 'react-scroll'
+import { Contact } from '../components/Contact'
 
 export default function App() {
   return (
@@ -23,6 +24,8 @@ export default function App() {
       <About />
 
       <Projects />
+
+      <Contact />
     </>
   )
 }

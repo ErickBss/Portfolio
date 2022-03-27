@@ -29,7 +29,10 @@ export function NavBar({ closeDrawer }: NavBarProps) {
       <ScrollLink to="projects" smooth={true}>
         <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>Projects</Link>
       </ScrollLink>
-      <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>Contact</Link>
+
+      <ScrollLink to="contact" smooth={true}>
+        <Link onClick={() => (closeDrawer ? closeDrawer() : '')}>Contact</Link>
+      </ScrollLink>
     </Flex>
   )
 }
