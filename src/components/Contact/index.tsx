@@ -7,6 +7,7 @@ import { Element } from 'react-scroll'
 export function Contact() {
   return (
     <Flex
+      justify={{ base: 'center', md: 'flex-start' }}
       margin="0 auto"
       p="1rem 0"
       gap="2rem"
