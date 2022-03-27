@@ -1,7 +1,10 @@
 import { Flex, Text, Heading, Stack } from '@chakra-ui/react'
 import { AbilitiesCards } from './cards'
 
-import { BsCodeSquare } from 'react-icons/bs'
+import { BsServer } from 'react-icons/bs'
+import { RiPagesFill } from 'react-icons/ri'
+import { FaServer, FaCode } from 'react-icons/fa'
+
 import { Definitions } from '../Definitions'
 
 export function About() {
@@ -20,11 +23,13 @@ export function About() {
         <Heading color="purple.400" fontWeight="600" fontSize="2rem">
           About me:
         </Heading>
-        <Text fontSize="1.125rem">
-          Hi, my name is Jayjay Dinero Dinero, i am a Fullstack web developer,
-          UI designer, and Mobile developer. I jhave honed my skills in Web
-          Development and advance i have core understanding of advance UI design
-          principles. Here are the major skiills i have.
+        <Text textAlign="justify" fontSize="1.125rem">
+          Hi, my name is Érick, I am a student and practically programming. I
+          focus on the full-stack area and on React, NodeJs, NextJs and Postgres
+          technologies. I want to improve myself more and more, so that through
+          programming I can successfully solve recurring problems. I am very
+          curious and always looking for challenges to test my knowledge. I
+          really enjoy training (gym), watching NBA games and playing chess.
         </Text>
         <Stack
           align="center"
@@ -35,8 +40,8 @@ export function About() {
             4
           </Text>
           <Text fontWeight="500" fontSize="1.5rem">
-            Years of experience. Specialised in building apps, while ensuring a
-            seamless web experience for end users.
+            Years of experience. Building web applications and interacting with
+            databases.
           </Text>
         </Stack>
 
@@ -46,32 +51,32 @@ export function About() {
           gap="2rem"
           justifyContent={{ base: 'center', md: 'space-between' }}
           flexWrap="wrap"
-          mb="5rem"
+          m="2rem 0"
         >
           <AbilitiesCards
-            key="Front - end"
-            ability="Front - end"
-            icon={BsCodeSquare}
+            key="Web Development"
+            ability="Web Development"
+            icon={FaCode}
+          />
+          <AbilitiesCards
+            key="Front - End Service"
+            ability="Front - End Service"
+            icon={RiPagesFill}
           />
 
           <AbilitiesCards
             key="Back - End Service"
-            ability="Web Development"
-            icon={BsCodeSquare}
-          />
-
-          <AbilitiesCards
-            key="Web Development"
-            ability="Web Development"
-            icon={BsCodeSquare}
+            ability="Back - End Service"
+            icon={FaServer}
           />
 
           <AbilitiesCards
             key="Database Handle"
             ability="Database Handle"
-            icon={BsCodeSquare}
+            icon={BsServer}
           />
         </Flex>
+
         <Definitions />
       </Flex>
     </Flex>

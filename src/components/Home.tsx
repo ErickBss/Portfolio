@@ -35,8 +35,8 @@ export function Home() {
             fontSize="1.125rem"
             lineHeight="normal"
           >
-            Freelance UI designer, Fullstack developer, Data Miner. I create
-            seamless web experiences for end-users.
+            Fullstack web developer. I create a full web application from the
+            server until the interface
           </Text>
           <HStack spacing="1rem">
             <Button colorScheme="purple">

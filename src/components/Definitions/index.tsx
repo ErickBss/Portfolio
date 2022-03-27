@@ -2,7 +2,10 @@ import { Flex, Heading, Stack } from '@chakra-ui/react'
 
 import { DefinitionBox } from './DefinitionBox'
 
-import { BsCodeSquare } from 'react-icons/bs'
+import { BsServer } from 'react-icons/bs'
+import { RiPagesFill } from 'react-icons/ri'
+import { FaServer, FaCode } from 'react-icons/fa'
+
 import { useIsActive } from '../hook/useIsActive'
 
 export function Definitions() {
@@ -16,51 +19,54 @@ export function Definitions() {
       </Heading>
 
       <Flex
-        justify={{ base: 'center', md: 'space-between' }}
+        justify={{ base: 'center', xl: 'space-between' }}
         gap="2rem"
         flexWrap="wrap"
       >
         <DefinitionBox
-          icon={BsCodeSquare}
-          ability="Web"
+          icon={FaCode}
+          ability="Full Stack"
+          category="Web Development"
           currentAbility={currentAbility}
-          description="I create beautiful iterfaces with simple HTML, CSS e JavaScript and also
-          frameworks like Angular and ReactJS"
+          description="All the necessary abilities to make a complete web site, with, front - end, back - end and the database resources"
+        />
+
+        <DefinitionBox
+          icon={RiPagesFill}
+          ability="Interfaces"
+          category="Front - End Service"
+          currentAbility={currentAbility}
+          description="The interface is the visual communication with the user, so, for the development I use the library ReactJS with the framework NextJS"
         />
         <DefinitionBox
-          icon={BsCodeSquare}
-          ability="Web"
+          icon={FaServer}
+          ability="Server Side"
+          category="Back - End Service"
           currentAbility={currentAbility}
-          description="I create beautiful iterfaces with simple HTML, CSS e JavaScript and also
-          frameworks like Angular and ReactJS"
+          description="The logical app part is on the server, where is made all the sensitive features and treatment of private data. I use NodeJs with Express for it"
         />
         <DefinitionBox
-          icon={BsCodeSquare}
-          ability="Web"
+          icon={FaServer}
+          ability="RestAPI"
+          category="Back - End Service"
           currentAbility={currentAbility}
-          description="I create beautiful iterfaces with simple HTML, CSS e JavaScript and also
-        frameworks like Angular and ReactJS"
+          description="Api is the way for get some data a internal or external server. RestAPI is a group of obligations which I use to consume that data"
         />
+
         <DefinitionBox
-          icon={BsCodeSquare}
-          ability="Web Development"
+          icon={BsServer}
+          ability="Storage"
+          category="Database Handle"
           currentAbility={currentAbility}
-          description="I create beautiful iterfaces with simple HTML, CSS e JavaScript and also
-      frameworks like Angular and ReactJS"
+          description="Store the data has many purpose, like, a login system or just for register. For all the possible storage features I use mysql and postgres databases"
         />
+
         <DefinitionBox
-          icon={BsCodeSquare}
-          ability="Web"
+          icon={BsServer}
+          ability="Handling Data"
+          category="Database Handle"
           currentAbility={currentAbility}
-          description="I create beautiful iterfaces with simple HTML, CSS e JavaScript and also
-    frameworks like Angular and ReactJS"
-        />
-        <DefinitionBox
-          icon={BsCodeSquare}
-          ability="Web"
-          currentAbility={currentAbility}
-          description="I create beautiful iterfaces with simple HTML, CSS e JavaScript and also
-          frameworks like Angular and ReactJS"
+          description="Many apps has the need to handle data user, like, update and delete. Prisma is the ORM tool which I use for this purpose"
         />
       </Flex>
     </Stack>

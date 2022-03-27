@@ -6,9 +6,11 @@ export default function Projects() {
     <Flex bg="purple.900" w="100vw" minH="100vh">
       <Flex
         direction="column"
+        gap={{ base: '2rem', md: '1rem', xl: 0 }}
         justify="space-evenly"
+        alignItems={{ base: 'center', md: 'flex-start' }}
         m="0 auto"
-        w="70rem"
+        w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
         p="2rem  0"
       >
         <Heading color="purple.400" fontSize="2rem">
@@ -20,7 +22,14 @@ export default function Projects() {
           Developer, here are a few of my live, real-world projects
         </Text>
 
-        <Flex w="70rem" justifyContent="space-between">
+        <Flex
+          w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+          flexDirection={{ base: 'column', md: 'row' }}
+          alignItems="center"
+          flexWrap="wrap"
+          gap="2rem"
+          justifyContent="space-between"
+        >
           <Project
             image="/spacetraveling.svg"
             title="Spacetraveling"
