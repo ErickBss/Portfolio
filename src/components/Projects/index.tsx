@@ -25,11 +25,16 @@ export function Projects() {
             Projects:
           </Heading>
         </Element>
-
-        <Text fontSize="1.125rem">
-          I have worked on many projects over the course of being a Web
-          Developer, here are a few of my live, real-world projects
-        </Text>
+        <Box>
+          <Text fontSize="1.125rem">
+            I have worked on many projects over the course of being a Web
+            Developer, here are a few of my live, real-world projects
+          </Text>
+          <Text color="gray.400" fontStyle="italic" fontSize="1.125rem">
+            Projects with (*) has instructions, so, read the Readme.md on github
+            to start the project correctly
+          </Text>
+        </Box>
 
         <Flex
           w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
@@ -49,7 +54,7 @@ export function Projects() {
 
           <Project
             image="/covid.png"
-            title="Covid Daily Cases"
+            title="Covid Daily Cases (*)"
             description="Project about worldwide statistics of Covid-19 and variants cases, filtered by daily and total cases."
             warning="For a correct use, read the instructions on the Github repository"
             published_link="http://challenge-covid-daily-cases.vercel.app/"
