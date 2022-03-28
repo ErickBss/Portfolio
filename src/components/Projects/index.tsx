@@ -37,7 +37,7 @@ export function Projects() {
           alignItems="center"
           flexWrap="wrap"
           gap="2rem"
-          justifyContent="space-between"
+          justifyContent={{ base: 'center', xl: 'space-between' }}
         >
           <Project
             image="/spacetraveling.svg"

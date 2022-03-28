@@ -33,7 +33,7 @@ export function Header() {
         h="5rem"
         w={{
           base: '26rem',
-          sm: '30rem',
+          sm: '28rem',
           md: '54rem',
           lg: '64rem',
           xl: '70rem',
