@@ -11,7 +11,7 @@ export function Projects() {
         justify="space-evenly"
         alignItems={{ base: 'center', md: 'flex-start' }}
         m="0 auto"
-        w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+        w={{ xs: '26rem', sm: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
         p="2rem  0"
       >
         <Element name="projects">

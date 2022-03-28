@@ -17,7 +17,7 @@ export function Home() {
         gap="2.5rem"
         direction={{ base: 'column-reverse', md: 'row' }}
         margin="0 auto"
-        w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+        w={{ xs: '26rem', sm: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
       >
         <Flex
           flex="1"

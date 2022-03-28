@@ -31,7 +31,7 @@ export function Header() {
         justify="space-between"
         alignItems="center"
         h="5rem"
-        w={{ base: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+        w={{ xs: '26rem', sm: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
       >
         <Text fontWeight={600} color="purple.400" fontSize="1.75rem">
           ErickBss
