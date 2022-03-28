@@ -12,7 +12,13 @@ export function Contact() {
       p="1rem 0"
       gap="2rem"
       fontSize="2rem"
-      w={{ xs: '26rem', sm: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+      w={{
+        base: '26rem',
+        sm: '30rem',
+        md: '54rem',
+        lg: '64rem',
+        xl: '70rem',
+      }}
     >
       <Element name="contact" />
 

@@ -14,7 +14,13 @@ export function About() {
   return (
     <Flex mt="8rem" width="100vw" minH="100vh" bg="purple.900">
       <Flex
-        w={{ xs: '26rem', sm: '30rem', md: '54rem', lg: '64rem', xl: '70rem' }}
+        w={{
+          base: '26rem',
+          sm: '30rem',
+          md: '54rem',
+          lg: '64rem',
+          xl: '70rem',
+        }}
         h="auto"
         p="2rem 0"
         margin="0 auto"
