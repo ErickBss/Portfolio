@@ -30,6 +30,7 @@ const customTheme = {
         bg: 'gray.900', // bg --> background
         color: 'white',
         fontWeight: '500',
+        translate: 'no',
       },
     },
   },
